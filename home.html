@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blokify — Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Top header -->
+<div class="top-row">
+  <span class="top-left">Blokify</span>
+  <span class="top-center">Home</span>
+  <span class="top-right" onclick="window.location.href='profile.html'">Profile</span>
+</div>
+
+
+  <div class="home-wrapper">
+    <!-- Your stories -->
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Your stories</h2>
+        <button class="link-btn" onclick="window.location.href='story.html'">+ New story</button>
+      </div>
+      <div class="cards-row" id="yourStoriesRow">
+        <p class="row-empty">Loading...</p>
+      </div>
+    </section>
+
+    <!-- Reading -->
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Reading</h2>
+      </div>
+      <div class="cards-row" id="readingRow">
+        <p class="row-empty">Loading...</p>
+      </div>
+    </section>
+
+    <!-- Newbies -->
+    <section class="row-section">
+      <div class="row-header">
+        <h2>Newbies</h2>
+      </div>
+      <div class="cards-row" id="newbiesRow">
+        <p class="row-empty">Loading...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

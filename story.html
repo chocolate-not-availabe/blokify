@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blokify — Story Details</title>
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+
+  <!-- Top header -->
+  <div class="top-row">
+    <span class="top-left" onclick="window.history.back()">Back</span>
+    <span class="top-center">Story Details</span>
+    <span class="top-right">Menu</span>
+  </div>
+
+  <!-- Main layout -->
+  <div class="details-wrapper">
+
+    <!-- LEFT: media pick / cover -->
+    <div class="cover-column">
+      <div class="cover-preview" id="coverPreview">
+        <span id="coverPlaceholder">Tap to pick cover</span>
+        <img id="coverImage" alt="Cover preview">
+      </div>
+
+      <label class="cover-button">
+        Choose Image
+        <input type="file" id="coverInput" accept="image/*" hidden>
+      </label>
+    </div>
+
+    <!-- RIGHT: form fields -->
+    <div class="form-column">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" id="titleInput" placeholder="Enter story title">
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="descInput" rows="4" placeholder="Write a short description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Genre</label>
+        <input type="text" id="genreInput" placeholder="e.g. Romance, Mystery">
+      </div>
+
+      <div class="form-group">
+        <label>Tags</label>
+        <input type="text" id="tagsInput" placeholder="e.g. jamaica, island, teen">
+        <small class="hint">Separate tags with commas.</small>
+      </div>
+
+      <div class="form-group switch-row">
+        <span>Originally yours</span>
+        <label class="switch">
+          <input type="checkbox" id="originalSwitch" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="buttons-row">
+        <button class="secondary-btn" id="readButton">
+          Read story
+        </button>
+        <button class="primary-btn" id="saveButton">
+          Save &amp; Go to Writing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="story.js"></script>
+</body>
+</html>

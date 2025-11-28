@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blokify — Writing</title>
+  <link rel="stylesheet" href="writing.css">
+</head>
+<body>
+
+  <!-- Top header -->
+  <div class="top-row">
+    <span class="top-left" onclick="window.history.back()">Back</span>
+    <span class="top-center" id="storyTitle">Writing</span>
+    <span class="top-right" id="menuButton">Menu</span>
+  </div>
+
+  <!-- Main writing area -->
+  <div class="writing-wrapper">
+    <div id="blocksContainer" class="blocks-container">
+      <!-- Blocks will be rendered here by writing.js -->
+    </div>
+  </div>
+
+  <!-- Menu dropdown (Save / Publish / Manage) -->
+  <div id="menuDropdown" class="menu-dropdown hidden">
+    <button class="menu-item" id="menuSave">Save</button>
+    <button class="menu-item" id="menuPublish">Publish</button>
+    <button class="menu-item" id="menuManage">Manage</button>
+  </div>
+
+  <!-- Bottom toolbar (Chat, Text, Image, Characters) -->
+  <div class="toolbar">
+    <button class="tool-btn" data-action="chat">Chat</button>
+    <button class="tool-btn" data-action="text">Text</button>
+    <button class="tool-btn" data-action="image">Image</button>
+    <button class="tool-btn" data-action="characters">Characters</button>
+  </div>
+
+  <!-- Simple dialog for adding/editing text -->
+  <div id="textDialog" class="dialog hidden">
+    <div class="dialog-content">
+      <h3 id="textDialogTitle">Add Text</h3>
+      <textarea id="textDialogInput" rows="4" placeholder="Type your text here..."></textarea>
+      <div class="dialog-actions">
+        <button id="textDialogCancel">Cancel</button>
+        <button id="textDialogSave">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple dialog for adding chat -->
+  <div id="chatDialog" class="dialog hidden">
+    <div class="dialog-content">
+      <h3>Add Chat</h3>
+      <label>Character</label>
+      <select id="chatCharacterSelect"></select>
+      <label>Message</label>
+      <textarea id="chatMessageInput" rows="3" placeholder="What does the character say?"></textarea>
+      <div class="dialog-actions">
+        <button id="chatDialogCancel">Cancel</button>
+        <button id="chatDialogSave">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple dialog for managing characters -->
+  <div id="charactersDialog" class="dialog hidden">
+    <div class="dialog-content">
+      <h3>Characters</h3>
+      <div id="charactersList" class="characters-list"></div>
+      <div class="form-inline">
+        <input type="text" id="newCharacterName" placeholder="New character name">
+        <button id="addCharacterButton">Add</button>
+      </div>
+      <div class="dialog-actions">
+        <button id="charactersDialogClose">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden file input for image blocks -->
+  <input type="file" id="imageInput" accept="image/*" hidden>
+
+  <!-- Block menu (Edit / Delete) -->
+  <div id="blockMenu" class="block-menu hidden">
+    <button id="blockMenuEdit">Edit</button>
+    <button id="blockMenuDelete">Delete</button>
+  </div>
+
+  <script src="writing.js"></script>
+</body>
+</html>

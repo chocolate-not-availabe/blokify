@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050506;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background-color: #101012;
+  border-radius: 16px;
+  padding: 20px 22px;
+  width: 90%;
+  max-width: 360px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.app-name {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.auth-tabs {
+  display: flex;
+  border-radius: 999px;
+  background-color: #181820;
+  padding: 2px;
+  margin-bottom: 14px;
+}
+
+.tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  padding: 6px 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #a876ff;
+  color: #fff;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-form label {
+  font-size: 13px;
+}
+
+.auth-form input {
+  background-color: #181820;
+  border-radius: 8px;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.primary-btn {
+  margin-top: 8px;
+  background-color: #a876ff;
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

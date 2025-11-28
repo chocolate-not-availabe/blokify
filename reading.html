@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blokify — Reading</title>
+  <link rel="stylesheet" href="reading.css">
+</head>
+<body>
+
+  <!-- Minimal top header -->
+  <div class="top-row">
+    <span class="top-left" onclick="window.history.back()">Back</span>
+    <span class="top-center" id="storyTitle">Reading</span>
+    <span class="top-right"></span>
+  </div>
+
+  <!-- Main reading area -->
+  <div class="reading-wrapper" id="readingWrapper">
+    <div id="hintOverlay" class="hint-overlay">
+      <p>Tap to read</p>
+    </div>
+
+    <div id="blocksContainer" class="blocks-container">
+      <!-- Blocks will appear here as you tap -->
+    </div>
+  </div>
+
+  <script src="reading.js"></script>
+</body>
+</html>

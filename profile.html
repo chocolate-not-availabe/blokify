@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blokify — Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <div class="top-row">
+    <span class="top-left" onclick="window.history.back()">Back</span>
+    <span class="top-center">Profile</span>
+    <span class="top-right"></span>
+  </div>
+
+  <div class="profile-wrapper">
+    <div class="profile-card">
+      <!-- Avatar + basic info -->
+      <div class="avatar-circle" id="profileAvatar">B</div>
+      <h2 id="profileUsername">Username</h2>
+      <p class="email" id="profileEmail">email@example.com</p>
+
+      <!-- Stats: Works, Taps, Reading -->
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-number" id="statWorks">0</div>
+          <div class="stat-label">Works</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="statTaps">0</div>
+          <div class="stat-label">Taps</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="statReading">0</div>
+          <div class="stat-label">Reading</div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="bio-section">
+        <label>Bio</label>
+        <textarea id="bioInput" rows="3" placeholder="Tell readers a bit about you..."></textarea>
+      </div>
+
+      <!-- SETTINGS (merged into same page) -->
+      <div class="settings-section">
+        <h3>Settings</h3>
+
+        <div class="setting-row">
+          <div class="setting-label">
+            <span>Reading text size</span>
+            <small>This changes how big the blocks look when reading.</small>
+          </div>
+          <select id="readingTextSizeSelect">
+            <option value="normal">Normal</option>
+            <option value="small">Small</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+
+        <!-- You can add more settings here later -->
+        <!-- e.g. Theme, tap behaviour, etc. -->
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons-row">
+        <button class="primary-btn" id="saveProfileButton">Save profile & settings</button>
+        <button class="secondary-btn" id="logoutButton">Log out</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
